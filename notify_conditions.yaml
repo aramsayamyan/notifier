@@ -1,0 +1,64 @@
+Company:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+    crawling_status: [ 13, 10 ]
+  notify_on_self: true
+  notify_on_other: []
+
+Event:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+    is_blacklisted: [ true, false ]
+    crawling_status: [ 13, 10 ]
+  notify_on_self: true
+  notify_on_other: []
+
+Webinar:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+    is_blacklisted: [ true, false ]
+    crawling_status: [ 13, 10 ]
+  notify_on_self: true
+  notify_on_other: []
+
+ContentItem:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+    is_blacklisted: [ true, false ]
+    crawling_status: [ 13, 10 ]
+  notify_on_self: false
+  notify_on_other: [ company ]
+
+CompanyForEvent:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+    is_blacklisted: [ true, false ]
+  notify_on_self: false
+  notify_on_other: [ event ]
+
+CompanyCompetitor:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+  notify_on_self: false
+  notify_on_other: [ company ]
+
+CompanyForWebinar:
+  on_delete: true
+  on_create: true
+  on_change:
+    is_deleted: [ true, false ]
+    is_blacklisted: [ true, false ]
+  notify_on_self: false
+  notify_on_other: [ webinar ]
